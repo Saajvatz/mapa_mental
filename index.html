@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - Taxonomía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .mapa-mental {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .nodo {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .nodo:hover {
+            background-color: #45a049;
+        }
+        .info {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function mostrarInfo(info) {
+            const infoElement = document.getElementById('info');
+            infoElement.innerHTML = info;
+        }
+    </script>
+</head>
+<body>
+    <h1>Selecciona un nodo para obtener más información sobre la taxonomía</h1>
+    <div class="mapa-mental">
+        <div class="nodo" onclick="mostrarInfo('La taxonomía es la ciencia que clasifica a los seres vivos en categorías jerárquicas.')">Taxonomía</div>
+        <div class="nodo" onclick="mostrarInfo('El Dominio es la categoría más amplia en la clasificación de los seres vivos. Existen tres: Archaea, Bacteria y Eukarya.')">Dominio</div>
+        <div class="nodo" onclick="mostrarInfo('El Reino es la segunda categoría más amplia. Ejemplos: Animalia, Plantae, Fungi, Protista, Monera.')">Reino</div>
+        <div class="nodo" onclick="mostrarInfo('El Filo agrupa organismos con características comunes dentro de un reino. Ejemplo: Chordata en animales.')">Filo</div>
+        <div class="nodo" onclick="mostrarInfo('La Clase agrupa órdenes similares dentro de un filo. Ejemplo: Mammalia dentro del filo Chordata.')">Clase</div>
+        <div class="nodo" onclick="mostrarInfo('El Orden clasifica familias relacionadas dentro de una clase. Ejemplo: Carnivora dentro de Mammalia.')">Orden</div>
+        <div class="nodo" onclick="mostrarInfo('La Familia agrupa géneros con características comunes. Ejemplo: Felidae incluye leones, tigres y gatos.')">Familia</div>
+        <div class="nodo" onclick="mostrarInfo('El Género agrupa especies similares. Ejemplo: Panthera incluye leones, tigres y leopardos.')">Género</div>
+        <div class="nodo" onclick="mostrarInfo('La Especie es la unidad básica de clasificación, representando organismos capaces de reproducirse entre sí.')">Especie</div>
+    </div>
+    <div id="info" class="info"></div>
+</body>
+</html>
